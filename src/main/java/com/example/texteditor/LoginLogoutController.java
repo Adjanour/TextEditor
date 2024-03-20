@@ -1,2 +1,4 @@
-package com.example.texteditor;public class LoginLogoutController {
+package com.example.texteditor;
+
+public class LoginLogoutController {
 }

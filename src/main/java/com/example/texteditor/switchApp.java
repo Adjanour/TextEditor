@@ -1,2 +1,4 @@
-package com.example.texteditor;public class switchApp {
+package com.example.texteditor;
+
+public class switchApp {
 }
