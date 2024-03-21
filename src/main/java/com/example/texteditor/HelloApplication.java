@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HelloApplication extends Application {
     @Override
@@ -15,7 +16,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader1 = new FXMLLoader(HelloApplication.class.getResource("login-logout.fxml"));
         Scene scene = new Scene(fxmlLoader1.load(), 383, 233);
         stage.setTitle("Login");
-        Image appIcon = new Image(getClass().getResourceAsStream("africoda.png"));
+        Image appIcon = new Image("africoda.png");
         stage.getIcons().add(appIcon);
         stage.setScene(scene);
         stage.show();

@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
@@ -207,6 +208,8 @@ public class HelloController implements Initializable {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
             Stage stage = new Stage();
             Scene scene = new Scene(fxmlLoader.load(), 873, 624);
+            Image appIcon = new Image("africoda.png");
+            stage.getIcons().add(appIcon);
             stage.setTitle("Text Editor");
             stage.setScene(scene);
             stage.show();
