@@ -3,6 +3,7 @@ package com.example.texteditor;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,6 +15,8 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader1 = new FXMLLoader(HelloApplication.class.getResource("login-logout.fxml"));
         Scene scene = new Scene(fxmlLoader1.load(), 383, 233);
         stage.setTitle("Login");
+        Image appIcon = new Image(getClass().getResourceAsStream("africoda.png"));
+        stage.getIcons().add(appIcon);
         stage.setScene(scene);
         stage.show();
     }
