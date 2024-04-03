@@ -1,7 +1,7 @@
 package com.example.texteditor;
 
 import javafx.application.Platform;
-import javafx.application.Preloader;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
-import java.nio.file.FileSystem;
+
 import java.util.*;
 
 public class HelloController implements Initializable {
@@ -209,7 +209,9 @@ public class HelloController implements Initializable {
             btnPrev.setDisable(false);
         }
         if (imageIndex == acceptedPictures.size()-1){
-            btnNext.setDisable(true);
+            imageIndex = 0;
+            imgView.setImage(new Image(String.valueOf(acceptedPictures.get(imageIndex))));
+//            btnNext.setDisable(true);
         }
     }
 
@@ -221,7 +223,9 @@ public class HelloController implements Initializable {
             btnNext.setDisable(false);
         }
         if (imageIndex == 0){
-            btnPrev.setDisable(true);
+            imageIndex =  acceptedPictures.size()-1;
+            imgView.setImage(new Image(String.valueOf(acceptedPictures.get(imageIndex))));
+//            btnPrev.setDisable(true);
         }
 
     }
